@@ -3,6 +3,7 @@ import { themeConfigSchema } from './theme-config';
 import { NodeType, listOf } from '.';
 import { Oas3_1Types } from './oas3_1';
 import { omitObjectProps, pickObjectProps, isCustomRuleId } from '../utils';
+import { seoConfigSchema } from "./portal-config-schema";
 
 const builtInCommonRules = [
   'spec',
@@ -200,6 +201,7 @@ const ConfigRoot: NodeType = {
     ...RootConfigStyleguide.properties,
     apis: 'ConfigApis',
     theme: 'ConfigRootTheme',
+    seo: 'seoConfigSchema',
     'features.openapi': 'ConfigReferenceDocs', // deprecated
     'features.mockServer': 'ConfigMockServer', // deprecated
     organization: { type: 'string' },
@@ -995,6 +997,7 @@ const ConfigMockServer: NodeType = {
   },
 };
 
+
 export const ConfigTypes: Record<string, NodeType> = {
   ...Oas3_1Types,
   Assert,
@@ -1012,6 +1015,7 @@ export const ConfigTypes: Record<string, NodeType> = {
   CommonConfigSidebarLinks,
   ConfigTheme,
   ConfigRootTheme,
+  seoConfigSchema:  seoConfigSchema as unknown as NodeType,
   AssertDefinition,
   ThemeColors,
   CommonThemeColors,
