@@ -7,6 +7,13 @@ toc:
 
 <!-- do-not-remove -->
 
+## 1.4.2 (2023-11-20)
+
+### Patch Changes
+
+- Support standalone docs development to facilitate more contributors, add docs quality checks to CI.
+- Updated @redocly/openapi-core to v1.4.2.
+
 ## 1.4.1 (2023-11-15)
 
 ### Patch Changes
